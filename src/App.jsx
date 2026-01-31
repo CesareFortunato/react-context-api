@@ -14,18 +14,19 @@ import ItemDetail from "./components/ItemDetail";
 function App() {
 
   return (
+    <BudgetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ItemDetail />} />
+          </Route>
 
-    <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ItemDetail />} />
-        </Route>
-
-      </Routes>
-    </BrowserRouter >
+        </Routes>
+      </BrowserRouter >
+    </BudgetProvider>
 
 
   )
