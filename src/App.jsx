@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //Layouts
 import DefaultLayout from "./layouts/DefaultLayout";
 
+//import contexts
+import { BudgetProvider } from "./contexts/BudgetContext";
+
 //Pages
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
